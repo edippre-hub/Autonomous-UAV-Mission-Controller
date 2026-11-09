@@ -1,0 +1,40 @@
+// Stores the current status of the UAV.
+// This structure represents telemetry and attitude information
+// received from sensors, GPS, and the flight controller.
+struct UAVState
+{
+    // Current GPS latitude in decimal degrees.
+    // Positive values indicate north of the equator.
+    double latitude;
+
+    // Current GPS longitude in decimal degrees.
+    // Positive values indicate east of the Prime Meridian.
+    double longitude;
+
+    // Current altitude above sea level or reference point
+    // measured in meters.
+    double altitude;
+
+    // Rotation about the UAV's forward axis (X-axis).
+    // Roll determines left and right banking motion.
+    // Measured in degrees.
+    double roll;
+
+    // Rotation about the UAV's side axis (Y-axis).
+    // Pitch determines nose-up and nose-down orientation.
+    // Measured in degrees.
+    double pitch;
+
+    // Rotation about the vertical axis (Z-axis).
+    // Yaw determines compass heading or direction.
+    // Measured in degrees.
+    double yaw;
+
+    // Current airspeed or ground speed of the UAV.
+    // Typically measured in meters per second (m/s).
+    double velocity;
+
+    // Remaining battery charge as a percentage.
+    // Valid range: 0.0 to 100.0
+    double batteryPercent;
+};
